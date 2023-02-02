@@ -1,6 +1,7 @@
-import { Component, OnInit, TRANSLATIONS} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Content } from '../helper-files/content-interface';
+
 
 @Component({
   selector: 'app-content-card',
@@ -9,5 +10,10 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent  {
 
+ @Input() items:any ;
+public Onclick(content:any)
+{
+  console.log("Id="+content.id +"  Title="+content.title );
 }
-  
+
+}

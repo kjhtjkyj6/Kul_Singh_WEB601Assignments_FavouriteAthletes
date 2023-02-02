@@ -1,17 +1,8 @@
-<div class="card">
-    <!-- <h4>{{item.id}}</h4> -->
-    <h5 class="card-header">{{item.title}}</h5>
+<div class="card" style="width: 18rem;">
+    <img src="{{items.imgURL}}" (click)="Onclick(items)" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{item.creator}}</h5>
-      <p class="card-text">{{item.description}}</p>
-      <!-- <h6>{{item.type}}</h6> -->
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">{{items.title}}</h5>
+      <p class="card-text">{{items.creator}}</p>
+      
     </div>
   </div>
-    
-  
-
-    
-
-    
-
