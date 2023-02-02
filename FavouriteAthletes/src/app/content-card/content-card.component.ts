@@ -1,4 +1,4 @@
-import { Component OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ContentList } from '../helper-files/content-list';
 import { Content } from '../helper-files/content-interface';
 
@@ -31,7 +31,7 @@ export class ContentCardComponent  {
     creator:"Kuljinder Singh",
     type:"Athletics"
   }
-  myContent = new ContentList(this.contentItem)
+  myContent = new ContentList()
   contentList = this.myContent.getContent();
   
   constructor() {
