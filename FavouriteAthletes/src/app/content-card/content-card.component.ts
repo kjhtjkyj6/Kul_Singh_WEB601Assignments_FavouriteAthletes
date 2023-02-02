@@ -1,7 +1,6 @@
-import { Component, OnInit} from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
-import { Content } from '../helper-files/content-interface';
+import { Component, OnInit, TRANSLATIONS} from '@angular/core';
 
+import { Content } from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-content-card',
@@ -10,35 +9,5 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent  {
 
-  contentItem:Content = {
-    id:1,
-    title:"Javelin",
-    description:"Javelin is one of the favourite games",
-    creator:"Kuljinder Singh",
-    type:"Athetics"
-  }
-  contentItem2:Content = {
-    id:2,
-    title:"Track Races",
-    description:"Track Race is one of the favourite games",
-    creator:"Kuljinder Singh",
-    type:"Athletics"
-  }
-  contentItem3:Content = {
-    id:3,
-    title:"Jumps",
-    description:"Jumps are one of the favourite games ",
-    creator:"Kuljinder Singh",
-    type:"Athletics"
-  }
-  myContent = new ContentList()
-  contentList = this.myContent.getContent();
+}
   
-  constructor() {
-    this.myContent.add(this.contentItem);
-    this.myContent.add(this.contentItem2);
-    this.myContent.add(this.contentItem3);
-   
-
-}
-}
