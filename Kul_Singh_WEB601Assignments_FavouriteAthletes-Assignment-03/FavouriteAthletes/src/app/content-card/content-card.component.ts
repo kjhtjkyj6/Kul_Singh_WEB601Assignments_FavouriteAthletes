@@ -1,0 +1,19 @@
+import { Component, Input, OnInit } from '@angular/core';
+
+
+
+
+@Component({
+  selector: 'app-content-card',
+  templateUrl: './content-card.component.html',
+  styleUrls: ['./content-card.component.scss']
+})
+export class ContentCardComponent  {
+
+ @Input() items:any ;
+public Onclick(content:any)
+{
+  console.log("Id="+content.id +"  Title="+content.title );
+}
+
+}
