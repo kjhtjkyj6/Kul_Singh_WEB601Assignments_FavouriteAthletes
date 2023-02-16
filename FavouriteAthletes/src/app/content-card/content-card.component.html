@@ -1,3 +1,16 @@
-<h1>Name of player</h1>
-<h2>Age of player</h2>
-<h3>Country of player</h3>
+<div [ngClass]="{'type1': items.type === 'race', 'type2': items.type === '','type3':items.type==='run'}">
+<header class="header">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5  bind-innerHtml="items.id"></h5>
+      <header>
+      <p class="card-text"bind-innerHtml="items.title"></p></header>
+      <p class="card-text"bind-innerHtml="items.description"></p>
+      <p class="card-text"bind-innerHtml="items.creator"></p>
+      <p class="card-text"bind-innerHtml="items.type"></p>
+      <img src="{{items.imgURL}}" (click)="Onclick(items)" class="card-img-top" alt="...">
+      
+    </div>
+  </div>
+  </header>
+  
