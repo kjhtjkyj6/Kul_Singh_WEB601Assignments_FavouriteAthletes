@@ -6,14 +6,32 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  searchTitle:string | undefined;
-  exist=false;
-  message:string | undefined
-  find()
-  {
-   const Search= this.contentItem.find(search=>search.title.toLowerCase()==this.searchTitle?.toLowerCase());
-   this.exist=!!Search;
-   this.message=this.exist? `Content with tilte "${this.searchTitle}"  exist`: `Content with tilte "${this.searchTitle}"  does not exist`
+  
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+  addNewContent(contentItem: any): void {
+    debugger
+    // add the new content to the contents array
+    this.contentItem.push(contentItem);
+
+    // log a success message
+    console.log(`Added ${contentItem.title} successfully`);
+
+    // clone the contents array to trigger change detection
+    this.contentItem = this.contentItem.slice();
+
+  
+  // searchTitle:string | undefined;
+  // exist=false;
+  // message:string | undefined
+  
+  // find()
+  // {
+  //  const Search= this.contentItem.find(search=>search.title.toLowerCase()==this.searchTitle?.toLowerCase());
+  //  this.exist=!!Search;
+  //  this.message=this.exist? `Content with tilte "${this.searchTitle}"  exist`: `Content with tilte "${this.searchTitle}"  does not exist`
+  
   }
 
   contentItem:Content[] = [{
@@ -86,8 +104,6 @@ constructor() {
 }
 
 
-ngOnInit(): void {
 
-}
 
 }
