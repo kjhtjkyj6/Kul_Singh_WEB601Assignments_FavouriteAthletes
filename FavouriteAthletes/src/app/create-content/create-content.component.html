@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="newcontentaddon.id"  name="id" id="input" placeholder="ID">
+<!-- <input type="text" [(ngModel)]="newcontentaddon.id"  name="id" id="input" placeholder="ID">
 <input type="text" [(ngModel)]="newcontentaddon.title"  name="title" id="type-input" placeholder="Title">
 <input type="text" [(ngModel)]="newcontentaddon.description" name="description" id="type-input"  placeholder="Description">
 <input type="text" [(ngModel)]="newcontentaddon.creator" name="creator" id="type-input"  placeholder="creator">
@@ -7,4 +7,32 @@
 <div class="d-flex flex-wrap justify-content-end">
 <button (click)="onSubmit()">Add Content </button>
 <h4 class="errorMessage" >{{errorMessage}}</h4>
+<p *ngIf="errorMessage" style="color: red; font-weight: bold;">{{ errorMessage }}</p>
+
 </div>
+ -->
+
+
+
+<form [formGroup]="newcontentaddon">
+    
+    <div>
+        <label for="id">ID</label>
+        <input type="text" id="id" formControlName="id">
+      </div>
+    
+    <div>
+      <label for="title">Title</label>
+      <input type="text" id="title" formControlName="title">
+    </div>
+  
+ 
+ 
+    <div>
+      <label for="type">Type</label>
+      <input type="text" id="type" formControlName="type">
+    </div>
+ 
+  
+  
+  
