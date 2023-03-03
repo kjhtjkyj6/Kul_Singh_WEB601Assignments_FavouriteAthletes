@@ -1,0 +1,12 @@
+<div style="width: 50%;">
+    <h3>Add Content</h3>
+    <input type="text" [(ngModel)]="newContent.id" placeholder="ID" class="form-control">
+<input type="text" [(ngModel)]="newContent.title" placeholder="Title" class="form-control">
+<input type="text" [(ngModel)]="newContent.description" placeholder="Description" class="form-control">
+<input type="text" [(ngModel)]="newContent.creator" placeholder="creator" class="form-control">
+<input type="text" [(ngModel)]="newContent.type" placeholder="Type" class="form-control">
+
+<!-- add input fields for other necessary fields -->
+<button (click)="SendContent()">Add Content</button>
+<p class="error" >{{errorMessage}}</p>
+</div>
