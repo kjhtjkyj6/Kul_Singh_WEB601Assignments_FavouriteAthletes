@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Component, EventEmitter, Output } from '@angular/core';
+=======
+import { Component, EventEmitter, Output } from "@angular/core";
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd
 
 @Component({
   selector: 'app-create-content',
@@ -6,6 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./create-content.component.scss']
 })
 export class CreateContentComponent {
+<<<<<<< HEAD
   @Output() OnContentAdded = new EventEmitter<any>();
   newContent: any = {};
   errorMessage: string="";
@@ -21,10 +26,28 @@ export class CreateContentComponent {
     },
     (error) => {
     // error function
+=======
+
+  @Output() contentAddon= new EventEmitter<any>();
+  newcontentaddon: any = {};
+  errorMessage: string="";
+  onSubmit() {
+    debugger
+   
+    this.sendContent().then(
+    (result) => {
+  
+    this.newcontentaddon = {}; 
+    this.contentAddon.emit(result); 
+    },
+    (error) => {
+    
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd
     console.error(error);
     }
     );
     }
+<<<<<<< HEAD
     sendContentUp(): Promise<any> {
       // simulate API call
       debugger
@@ -34,11 +57,26 @@ export class CreateContentComponent {
         const errorMessage = 'Please fill all fields';
         console.error(errorMessage);
         this.errorMessage = 'Please fill all fields';
+=======
+    sendContent(): Promise<any> {
+      
+      debugger
+      return new Promise((resolve, reject) => {
+         // Check for required fields
+      if (!this.newcontentaddon.title) {
+        const errorMessage = 'Please fill in all required fields.';
+        console.error(errorMessage);
+        this.errorMessage = 'Please fill in all required fields.';
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd
         reject(errorMessage);
         return;
       }
         setTimeout(() => {
+<<<<<<< HEAD
           const clonedContent = Object.assign({}, this.newContent);
+=======
+          const clonedContent = Object.assign({}, this.newcontentaddon);
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd
           // add new content to ContentList using resolved promise
           resolve(clonedContent);
         }, 2000);

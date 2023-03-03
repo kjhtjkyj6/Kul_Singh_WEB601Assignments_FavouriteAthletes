@@ -1,4 +1,10 @@
+<!-- 
+<div class="search">
+  <input type="text" [(ngModel)]="searchTitle">
+  <button (click)="find()">Search</button>
+</div>
 
+<<<<<<< HEAD
 
 
 
@@ -24,3 +30,21 @@
     </div>
 
     <app-create-content (OnContentAdded)="addNewContent($event)"></app-create-content>
+=======
+<div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
+  {{message}}
+</div> -->
+<h2>Empty value</h2>
+<div class="content-list-container">
+    <app-content-card  *ngFor="let items of contentItem | pipe:''"  [items]="items" ></app-content-card>
+  </div>
+<h2>run</h2>
+  <div class="content-list-container">
+    <app-content-card *ngFor="let items of contentItem | pipe:'run'"  [items]="items" ></app-content-card>
+  </div>
+  <h2>race</h2>
+  <div class="content-list-container">
+    <app-content-card *ngFor="let items of contentItem | pipe:'race'" [items]="items" ></app-content-card>
+  </div>
+  <app-create-content (contentAddon)="addNewContent($event)"></app-create-content>
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd

@@ -8,7 +8,11 @@ import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { PipePipe } from './pipe.pipe';
+<<<<<<< HEAD
 import { CreateContentComponent } from './create-content/create-content.component';
+=======
+import { HoverAffectDirective } from './hover-affect.directive';
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { CreateContentComponent } from './create-content/create-content.componen
     ContentListComponent,
 
     PipePipe,
+<<<<<<< HEAD
      CreateContentComponent
+=======
+     HoverAffectDirective
+>>>>>>> e3fc8b2bf32bb9ddbd01769c7651a536fbcc18bd
   ],
   imports: [
     BrowserModule,
