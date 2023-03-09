@@ -32,14 +32,14 @@ export class AppComponent {
       return;
     }
     debugger
-    this.contentService.getContent().subscribe(content => {
+    this.contentService.getathlete().subscribe(content => {
       if (idNumber > content.length) {
         this.errorMessage = 'Invalid ID number entered';
         this.messageService.addMessage(this.errorMessage);
        
       }
       else{
-        this.contentService.getContentById(idNumber).subscribe(
+        this.contentService.getathleteById(idNumber).subscribe(
           (contentCard: any) => {
             this.contentCard = contentCard;
             this.messageService.addMessage(`Content Card at ID ${idNumber} retrieved`);

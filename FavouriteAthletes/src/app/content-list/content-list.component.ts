@@ -10,7 +10,7 @@ export class ContentListComponent implements OnInit {
   contentItem:Content[]=[];
   content: Content[] | undefined;
   ngOnInit(): void {
-    this.contentService.getContent().subscribe((content: Content[]) => {
+    this.contentService.getathlete().subscribe((content: Content[]) => {
       this.content = content;
     });
   }

@@ -10,11 +10,11 @@ export class FavouriteAthletService {
 
   constructor(private messageService: MessageService) { }
   
-  getContent(): Observable<any[]> {
+  getathlete(): Observable<any[]> {
     this.messageService.addMessage('Content array loaded!');
     return of(contentDb);
   }
-  getContentById(id: number): Observable<any> {
+  getathleteById(id: number): Observable<any> {
     this.messageService.addMessage(`Content Item at id: ${id}`);
     return of(contentDb.find(content => content.id === id)); 
   }
