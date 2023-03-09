@@ -21,13 +21,11 @@ export class AppComponent {
 
 
   onRetrieveContentCard(): void {
-    // Reset the error message
+    
     this.errorMessage = '';
 
-    // Attempt to parse the ID as a number
     const idNumber = parseInt(this.id);
 
-    // Check if the parsed ID is a number and within the bounds of the content array
     if (isNaN(idNumber) || idNumber < 1) {
       this.errorMessage = 'Invalid ID number entered';
       this.messageService.addMessage(this.errorMessage);
@@ -53,8 +51,6 @@ export class AppComponent {
         );
       }
     });
-
-    // Use the content service to retrieve the content card with the given ID
     
   }
 

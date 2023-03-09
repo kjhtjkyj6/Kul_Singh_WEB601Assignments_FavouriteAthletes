@@ -16,6 +16,6 @@ export class FavouriteAthletService {
   }
   getContentById(id: number): Observable<any> {
     this.messageService.addMessage(`Content Item at id: ${id}`);
-    return of(contentDb.find(content => content.id === id)); // find id 1
+    return of(contentDb.find(content => content.id === id)); 
   }
 }
