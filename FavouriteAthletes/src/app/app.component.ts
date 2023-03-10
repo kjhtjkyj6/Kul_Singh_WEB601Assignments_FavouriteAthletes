@@ -20,7 +20,7 @@ export class AppComponent {
 
 
 
-  onRetrieveContentCard(): void {
+  onRetrieveathlete(): void {
     
     this.errorMessage = '';
 
