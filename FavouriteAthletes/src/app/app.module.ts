@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { leadingComment } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,22 +10,32 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { PipePipe } from './pipe.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
-import { AppMessagesComponent } from './app-messages/app-messages.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { ModifyContentComponent } from './modify-content/modify-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     ContentListComponent,
+    ModifyContentComponent,
 
     PipePipe,
      HoverAffectDirective,
-     AppMessagesComponent
+     ModifyContentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    RouterModule,
+    FormsModule ,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+      delay: 1000,
+      })
   ],
   providers: [],
   bootstrap: [AppComponent]

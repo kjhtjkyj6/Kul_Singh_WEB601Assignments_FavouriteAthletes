@@ -9,7 +9,7 @@ export class HoverAffectDirective {
   constructor(private EL:ElementRef) { }
   
   @HostListener('mouseenter') onMouseEnter(){
-    debugger
+  
     if (this.hoverAffect === 'underline') {
       this.EL.nativeElement.style.textDecoration = 'underline';
     } else if (this.hoverAffect === 'bold') {

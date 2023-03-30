@@ -1,14 +1,31 @@
-<div class="search">
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <app-modify-content></app-modify-content>
+    </div>
+  </div>
+
+   
+</div>
+
+ <!-- <div class="search">
     <input type="text" [(ngModel)]="searchTitle">
     <button (click)="find()">Search</button>
-  </div>
+  </div> -->
+
+   
   
-  <div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
+  <!-- <div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
     {{message}}
   </div>
   <h2>Empty value</h2>
   <div class="content-list-container">
-      <app-content-card  *ngFor="let items of contentItem | pipe:''"  [items]="items" ></app-content-card>
+      <app-content-card  *ngFor="let items of contents | pipe:''"  [items]="items" ></app-content-card>
     </div>
   <h2>run</h2>
     <div class="content-list-container">
@@ -17,4 +34,4 @@
     <h2>race</h2>
     <div class="content-list-container">
       <app-content-card *ngFor="let items of contentItem | pipe:'race'" [items]="items" ></app-content-card>
-    </div>
+    </div> -->
