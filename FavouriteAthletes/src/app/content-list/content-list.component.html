@@ -5,13 +5,15 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
-      <app-modify-content></app-modify-content>
+    <div class="col-md-12 mt-md-4">
+      <!-- <app-modify-content></app-modify-content> -->
+
+      <button  mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
     </div>
   </div>
 
    
-</div>
+ 
 
  <!-- <div class="search">
     <input type="text" [(ngModel)]="searchTitle">
@@ -19,15 +21,16 @@
   </div> -->
 
    
-  
-  <!-- <div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
-    {{message}}
-  </div>
-  <h2>Empty value</h2>
-  <div class="content-list-container">
-      <app-content-card  *ngFor="let items of contents | pipe:''"  [items]="items" ></app-content-card>
+  <!-- *ngFor="let items of contents | pipe:''"  [items]="items" -->
+   <div class="row mt-md-4">
+    <div class="col-md-4" *ngFor="let items of contentItem" >
+     
+        <app-content-card   [items]="items"  ></app-content-card>
+      
     </div>
-  <h2>run</h2>
+   </div>
+  
+  <!-- <h2>run</h2>
     <div class="content-list-container">
       <app-content-card *ngFor="let items of contentItem | pipe:'run'"  [items]="items" ></app-content-card>
     </div>
@@ -35,3 +38,5 @@
     <div class="content-list-container">
       <app-content-card *ngFor="let items of contentItem | pipe:'race'" [items]="items" ></app-content-card>
     </div> -->
+
+  </div>

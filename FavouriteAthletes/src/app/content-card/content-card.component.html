@@ -1,4 +1,4 @@
-<div [ngClass]="{'type1': items.type === 'race', 'type2': items.type === '','type3':items.type==='run'}">
+<!-- <div [ngClass]="{'type1': items.type === 'race', 'type2': items.type === '','type3':items.type==='run'}">
 <header class="header">
 <div class="card" style="width: 18rem;">
     <div class="card-body">
@@ -15,5 +15,30 @@
       
     </div>
   </div>
-  </header>
+  </header> -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <mat-card style="margin: 5px;" class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{items.creator}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{items.imgURL}}"  >
+          <mat-card-content>
+            <p>
+              {{items.description}}
+            </p>
+          </mat-card-content>
+
+          <mat-card-footer>
+            <button mat-raised-button (click)="updateContent(items)">update</button>
+          </mat-card-footer>
+         
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
   

@@ -1,7 +1,9 @@
+import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Content } from '../helper-files/content-interface';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ export class ContentService {
 
   private baseUrl = 'api/contents';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient , private memoryService :InMemoryDataService) {}
   
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-type':
@@ -20,9 +22,11 @@ export class ContentService {
   getContents(): Observable<Content[]> {
     return this.http.get<Content[]>(this.baseUrl);
   }
-
+  
 
   addContent(content: Content): Observable<Content> {
+
+   
     return this.http.post<Content>(this.baseUrl, content , this.httpOptions);
   }
 
