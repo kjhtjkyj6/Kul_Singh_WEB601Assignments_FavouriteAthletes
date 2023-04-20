@@ -14,6 +14,8 @@ import { PipePipe } from './pipe.pipe';
 import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
 import { RouterModule } from '@angular/router';
 import { ContentDetailModule } from './content-detail/content-detail.module';
+import { SportService } from './services/sport.service';
+import { HttpClientModule } from '@angular/common/http';
  
 
 @NgModule({
@@ -34,10 +36,11 @@ import { ContentDetailModule } from './content-detail/content-detail.module';
     FormsModule ,
     RouterModule,
     ReactiveFormsModule ,
-    ContentDetailModule
+    ContentDetailModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [SportService],
   bootstrap: [AppComponent]
 })
   export class AppModule { }

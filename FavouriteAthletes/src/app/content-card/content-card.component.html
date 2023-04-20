@@ -5,12 +5,13 @@
       <h5  bind-innerHtml="items.id"></h5>
       <header>
       <p class="card-text"bind-innerHtml="items.title"></p></header>
-      <p class="card-text"bind-innerHtml="items.description"></p>
+      <!-- <p class="card-text"bind-innerHtml="items.description"></p>
       <p class="card-text"bind-innerHtml="items.creator"></p>
-      <p class="card-text"bind-innerHtml="items.type"></p>
+      <p class="card-text"bind-innerHtml="items.type"></p> -->
       <img src="{{items.imgURL}}"  routerLink="/content-detail"   class="card-img-top" alt="...">
-      
+ 
       </div>
+      <button class="btn btn-primary" routerLink="/content-detail"  (click)="getContentId(items)">content Detail</button>
   </div>
   </header>
   

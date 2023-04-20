@@ -1,1 +1,20 @@
-<p>content-detail works!</p>
+<div class="container">
+    <button class="btn btn-primary"  (click)="movetoList()">Back to list</button>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5  bind-innerHtml="contentData.id"></h5>
+                  <header>
+                  <p class="card-text"bind-innerHtml="contentData.title"></p></header>
+                  <p class="card-text"bind-innerHtml="contentData.description"></p>
+                  <p class="card-text"bind-innerHtml="contentData.creator"></p>
+                  <p class="card-text"bind-innerHtml="contentData.type"></p>
+                  <img src="{{contentData.imgURL}}"  routerLink="/content-detail"   class="card-img-top" alt="...">
+                  
+                  </div>
+              </div>
+
+        </div>
+    </div>
+</div>
