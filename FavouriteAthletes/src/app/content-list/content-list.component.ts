@@ -15,14 +15,20 @@ export class ContentListComponent implements OnInit {
    this.exist=!!Search;
    this.message=this.exist? `Content with tilte "${this.searchTitle}"  exist`: `Content with tilte "${this.searchTitle}"  does not exist`
   }
-
+  addNewContent(content: any): void {
+   
+    // add the new content to the contents array
+    this.contentItem.push(content);
+    console.log(`Added ${content.title} successfully`);
+    this.contentItem = this.contentItem.slice();
+  }
   contentItem:Content[] = [{
     id:0,
     title:"Javelin",
     description:"Javelin is one of the favourite games",
     creator:"Kuljinder Singh",
     type:"Athetics",
-    imgURL:""  },
+    imgURL:"https://3.bp.blogspot.com/-W5Am6DMqhJo/Vum2x4AeFvI/AAAAAAAAiIU/vtXAw11pHuA6dRun-SzW9Fc_ldlLkEfAg/s1600/Javelin%2BThrow%2BSport%2B02.png"  },
  {
     id:1,
     title:"Track Races",
@@ -43,7 +49,7 @@ export class ContentListComponent implements OnInit {
     description:"Swimming is one of the favourite games ",
     creator:"Kuljinder Singh",
     type:"",
-    imgURL:""  }
+    imgURL:"https://jooinn.com/images/swimming-championship-3.jpg"  }
   ,{
     id:4,
     title:"Races",

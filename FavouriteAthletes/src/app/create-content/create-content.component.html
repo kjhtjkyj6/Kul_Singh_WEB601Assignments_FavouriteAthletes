@@ -1,0 +1,30 @@
+
+<div style="width: 50%;">
+    <h3>Add Content</h3>
+    <input type="text" [(ngModel)]="newContent.id" name="id"  placeholder="ID" class="form-control">
+<input type="text" [(ngModel)]="newContent.title "  name="title"  placeholder="Title" class="form-control">
+<input type="text" [(ngModel)]="newContent.description " name="description" placeholder="Description" class="form-control">
+<input type="text" [(ngModel)]="newContent.creator" name="creator" placeholder="creator" class="form-control">
+<input type="text" [(ngModel)]="newContent.type" name="type" placeholder="Type" class="form-control">
+
+<!-- add input fields for other necessary fields -->
+<button (click)="onsubmit()">Add Content</button>
+<p class="error" >{{errorMessage}}</p>
+</div>
+
+ <!-- <input type="text" [(ngModel)]="newcontentaddon.id"  name="id" id="input" placeholder="ID">
+<input type="text" [(ngModel)]=" newcontentaddon.title"  name="title" id="type-input" placeholder="Title">
+<input type="text" [(ngModel)]=" newcontentaddon.description" name="description" id="type-input"  placeholder="Description">
+<input type="text" [(ngModel)]=" newcontentaddon.creator" name="creator" id="type-input"  placeholder="creator">
+<input type="text" [(ngModel)]="newcontentaddon.type" name="type" id="type-input"  placeholder="Type">
+<div class="d-flex flex-wrap justify-content-end">
+<button (click)="onsubmit()">Add Content </button>
+<h4 class="errorMessage" >{{errorMessage}}</h4>
+<p *ngIf="errorMessage" style="color: red; font-weight: bold;">{{ errorMessage }}</p>
+</div> -->
+ 
+
+
+
+ 
+ 

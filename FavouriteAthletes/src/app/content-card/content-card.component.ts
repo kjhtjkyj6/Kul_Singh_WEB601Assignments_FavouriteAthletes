@@ -10,12 +10,10 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent  {
 
-  default:string="/assets/imgs/photo.jpg"
-
  @Input() items:any ;
-public Onclick(content:any)
-{
-  console.log("Id="+content.id +"  Title="+content.title );
-}
+// public Onclick(content:any)
+// {
+//   console.log("Id="+content.id +"  Title="+content.title );
+// }
 
 }
